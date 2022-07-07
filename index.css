@@ -42,10 +42,23 @@ body{
     border-radius: 100%;
     margin: 50px;
 }
-.img{
-    height: 100%;
-    width: 100%;
+
+.main-holder{
+    transition: all 0.5s;
 }
+.main-holder:hover{
+    transform: scale(1.1);
+}
+.img{
+    height: 400px;
+    width: auto;
+}
+
+.img-rock{
+    position: relative;
+    bottom: 30px;
+}
+
 .dscp{
     font-size: 30px;
     text-align: center;
@@ -62,4 +75,10 @@ body{
 a{
     text-decoration: none ;
     color: #8B9A46;
+}
+
+button{
+    background-color: #040303;
+    border: none;
+    color: #8B9A46  ;
 }
