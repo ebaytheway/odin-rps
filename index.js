@@ -3,7 +3,7 @@ const scissors = document.querySelector(".scissors")
 const paper = document.querySelector(".paper")
 const test = document.querySelector(".test")
 
-const elem = ["Rock","Paper","Scissors"]
+let elem = ["Rock","Paper","Scissors"]
 let player;
 let computer;
 
@@ -12,16 +12,18 @@ rock.addEventListener("click" , () =>{
     player = elem[0]
     computer = computerChoice();
     result(player,computer)
+
 })
 
 paper.addEventListener("click" , () =>{
-    player = elem[0]
+    player = elem[1]
     computer = computerChoice();
-    result(player,computer)
+    unSelect(elem,player,computer)
+    console.log(computer)
 })
 
 scissors.addEventListener("click" , () =>{
-    player = elem[0]
+    player = elem[2]
     computer = computerChoice();
     result(player,computer)
 })
@@ -39,3 +41,27 @@ function result(pC,cC){
         console.log("Player Won!")
     }
 }
+
+
+function unSelect(arr,pla,comp){
+    let newArr = []
+    newArr = arr.filter(e => e != pla && e != comp)
+    
+    for (let i = 0; i < newArr.length; i++) {
+        if(newArr[i] == "Rock"){
+            rock.classList.add("unpicked")
+        }
+        if(newArr[i] == "Paper"){
+            paper.classList.add("unpicked")
+        }
+        if(newArr[i] == "Scissors"){
+            scissors.classList.add("unpicked")
+        }
+    }
+}
+
+
+
+// function addClass(){
+// 
+// }

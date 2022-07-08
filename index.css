@@ -4,8 +4,11 @@ body{
     box-sizing: border-box;
     background-color: #040303;;
     color: #8B9A46;
-    align-items: center;    
+    align-items: center;  
+    
+    
 }
+
 .main-header{
     top: 0px;
     width: 100%;
@@ -43,9 +46,6 @@ body{
     margin: 50px;
 }
 
-.main-holder{
-    transition: all 0.5s;
-}
 .main-holder:hover{
     transform: scale(1.1);
 }
@@ -68,7 +68,7 @@ body{
 .footer{
     position: relative;
     width: 95%;
-    text-align: right;
+    text-align:right;
     height: 30px;
 }
 
@@ -78,7 +78,19 @@ a{
 }
 
 button{
-    background-color: #040303;
+    background-color: transparent;
     border: none;
-    color: #8B9A46  ;
+    color: #8B9A46;
+}
+
+
+.unpicked{
+    animation-name:op;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes op {
+    0% {transform: scale(1); width: 400px; height: 400px;}
+    100%{transform: scale(0);width: 0px;height: 0px;}
 }
