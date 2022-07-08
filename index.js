@@ -12,26 +12,27 @@ rock.addEventListener("click" , () =>{
     player = elem[0]
     computer = computerChoice();
     result(player,computer)
-
+    unSelect(elem,player,computer)
 })
 
 paper.addEventListener("click" , () =>{
     player = elem[1]
     computer = computerChoice();
+    result(player,computer)
     unSelect(elem,player,computer)
-    console.log(computer)
 })
 
 scissors.addEventListener("click" , () =>{
     player = elem[2]
     computer = computerChoice();
     result(player,computer)
+    unSelect(elem,player,computer)
 })
 
 
 function computerChoice(){
     computer = Math.floor(Math.random() * 3)
-    return elem[computer]
+    return elem[computer];
 }
 
 function result(pC,cC){
@@ -59,9 +60,3 @@ function unSelect(arr,pla,comp){
         }
     }
 }
-
-
-
-// function addClass(){
-// 
-// }

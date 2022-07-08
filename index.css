@@ -47,6 +47,7 @@ body{
 }
 
 .main-holder:hover{
+    transition: all 0.5s;
     transform: scale(1.1);
 }
 .img{
