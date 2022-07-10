@@ -1,9 +1,9 @@
 const rock = document.querySelector(".rock")
 const scissors = document.querySelector(".scissors")
-const paper = document.querySelector(".paper")
-const test = document.querySelector(".test")
+const paper = document.querySelector(".paper");
+const test = document.querySelector(".test");
 const paBtn = document.querySelector(".paBtn");
-
+const resultText = document.querySelector(".result-text");
 
 let elem = ["Rock","Paper","Scissors"]
 let player;
@@ -39,13 +39,23 @@ function computerChoice(){
 
 function result(pC,cC){
     if(pC == cC){
-        console.log("draw")
-    } else if (pC == elem[0] && cC == elem[2]){
-        console.log("Player Won!")
+        resultText.innerHTML = "Draw";
+    } else if (pC == "Rock" && cC =="Scissors"){
+        resultText.innerHTML = "Player Won!";
+    } else if (pC == "Rock" && cC == "Paper"){
+        resultText.innerHTML = "Computer Won!";
+    } else if (pC == "Paper" && cC =="Scissors"){
+        resultText.innerHTML = "Computer Won!";
+    } else if (pC == "Paper" && cC == "Rock"){
+        resultText.innerHTML = "Player Won!";
+    } else if (pC == "Scissors" && cC =="Rock"){
+        resultText.innerHTML = "Computer Won!";
+    } else if (pC == "Scissors" && cC == "Paper"){
+        resultText.innerHTML = "Player Won!";
     }
     setInterval(() => {
         document.querySelector(".play-again").style.visibility = "visible"; 
-    }, 750);
+    }, 1000);
     rock.disabled = true;
     paper.disabled = true;
     scissors.disabled = true;
