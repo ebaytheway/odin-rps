@@ -2,6 +2,8 @@ const rock = document.querySelector(".rock")
 const scissors = document.querySelector(".scissors")
 const paper = document.querySelector(".paper")
 const test = document.querySelector(".test")
+const paBtn = document.querySelector(".paBtn");
+
 
 let elem = ["Rock","Paper","Scissors"]
 let player;
@@ -41,6 +43,12 @@ function result(pC,cC){
     } else if (pC == elem[0] && cC == elem[2]){
         console.log("Player Won!")
     }
+    setInterval(() => {
+        document.querySelector(".play-again").style.visibility = "visible"; 
+    }, 750);
+    rock.disabled = true;
+    paper.disabled = true;
+    scissors.disabled = true;
 }
 
 
@@ -60,3 +68,9 @@ function unSelect(arr,pla,comp){
         }
     }
 }
+
+paBtn.onclick =() => {
+    location.reload();
+}
+
+ 
