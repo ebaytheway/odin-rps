@@ -129,29 +129,3 @@ button{
     background-color: gray;
     color: black;
 }
-
-
-@media (max-width: 550px) {
-    .header {
-      font-size: 30px;
-    }
-    .holder{
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-    }
-    .img{
-        width: 50px;
-        height: auto;
-    }
-    .rps-holder{
-        height: 200px;
-    }
-    .dscp{
-        font-size:15px ;
-    }
-    .img-rock{
-        position: relative;
-        bottom: 5px;
-    }
-  }
